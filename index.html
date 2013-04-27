@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Doppelganger</title>
+    <!--[if IE]>
+      <script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" media="screen" href="basic-modal.css" /> 
+	<link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.simplemodal-1.3.5.js"></script>
+	<script type="text/javascript" src="doodle-0.1.1.min.js"></script>
+	<script type="text/javascript" src="modal.js"></script>
+	<script type="text/javascript" src="submit.js"></script>
+    
+
+  </head>
+  
+  <body>
+  <div id="nav">
+  	  	<a class="controls" id="email" href="#">Email</a>
+  	  	<a class="controls" id="about" href="#">About</a>
+  	<div id="title">
+  		<a href="#" class="basic"><h1>Doppelganger</h1></a>
+  	</div>
+  </div>
+  	<div id="wrapper">
+    <canvas id="grid" width="800px" height="600px">
+        <p>Sorry, this browser doesn't support the canvas element.</p>
+     	<script type="text/javascript">
+   			var grid_canvas = document.getElementById("grid");
+			var context = grid_canvas.getContext("2d");
+			
+			context.fillStyle = "#fff";
+	    	context.fillRect(0,0,800,600);
+						
+			for (var x = 0.5; x < 800; x += 10) {
+  				context.moveTo(x, 0);
+  				context.lineTo(x, 600);
+			}
+
+			for (var y = 0.5; y < 600; y += 10) {
+  				context.moveTo(0, y);
+  				context.lineTo(800, y);
+			}
+			context.strokeStyle = "#eee";
+			context.stroke();
+			
+	</script>
+    </canvas>
+    </div>
+    
+    <!-- Questions -->
+    
+    <div id="questions">
+    <form class="cmxform" id="target" action="" method="post">
+    <fieldset>
+    <legend><h2>Questions</h2></legend>
+    <hr />
+    <ol>
+    <li><label for="name">Name</label><input id="name" /></li>
+    <hr />
+    <li><label for="sex">Sex</label>
+    <select name="sex" id="sex">
+    <option value="choose">Choose Below</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    </select>
+    <hr />
+    <li><label for="age">Age</label><input id="age" /></li>
+    <hr />
+    <li><label for="color">Color</label>
+    <select name="color" id="color">
+    <option value="choose">Choose Below</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="orange">Orange</option>
+    <option value="purple">Purple</option>
+    </select>
+    </li>
+    <hr />
+    <li><label for="height">Height (in.)</label><input id="height" /></li>
+    <hr />
+    <li><label for="animal">Animal</label>	
+    <select name="animal" id="animal">
+	<option value="choose">Choose Below</option>
+	<option value="dog">Dog</option>
+	<option value="cat">Cat</option>
+	<option value="sloth">Sloth</option>
+	<option value="bear">Bear</option>
+	<option value="manatee">Manatee</option>
+	</select>
+	<hr />
+	</li>
+	<li><label for="favNumber">Favorite #</label><input id="favNumber"</li>
+	<hr />
+	<li class="simplemodal-close"><input type="submit" value="Submit" id="submit" /></li>
+    </ol>
+	</fieldset>
+	</form>
+    </div>
+    
+   <!-- Information Modal -->
+   
+   <div id="info">
+   <p>Welcome to <strong>Doppelganger</strong>.</p>
+   <br /> 
+   <p>Doppelganger asks a series of questions, and based on the answers to those questions, it will create an image that is just like you. Once you create the image, 	you can click the <strong>Save</strong> button in the lower left to have your image open in a new window. Please <strong>right-click</strong> to save it to your 	computer.</p> 
+   <br />
+   <p>Also, feel free to email Doppelganger to a friend using the button to the right.</p>  
+   <br />
+   <hr />
+   <br />
+   <p><strong>Doppelganger</strong> creates its life like replicas with help of:</p>
+   <br />
+   <ul>
+   <li><strong>HTML5 & CSS3</strong> - Soon to be the new standards for the web.</li>
+   <li><strong>doodle.js</strong> - A sprite based javascript library for drawing in the canvas.</li>
+   <li><strong>SimpleModal</strong> - A jQuery modal box implementation.</li>
+   </ul>
+   
+   </div>
+   
+   <!-- Email -->
+   <div id="emailer">
+   <form name="eMailer">
+	<p style="text-align:center; font-weight: bold;">Tell a Friend:</p>
+	<br />
+	<ul>
+	<li><input style="padding:.3em;font-size:1.2em;" type="text" name="email" size="26" value="Enter Address Here" onFocus="this.value=''" onMouseOver="window.status='Enter email address here and tell a friend about this site...'; return true" onMouseOut="window.status='';return true">
+	</li>
+	<br />
+	<li>
+	<input type="button" value="Send" onMouseOver="window.status='Click to send an email (with this page address) to a friend! Enter email address above...'; return 	true" onMouseOut="window.status='';return true" onClick="mailThisUrl();">
+	</li>
+	</ul>
+	</form>
+    </div>
+    
+    <!-- Footer -->
+    
+    <div id="controls">
+    <input type="button" value="Save" id="save" />
+    <input type="button" value="Clear" id="clear" />
+    </div>
+    <!-- @font-face load -->
+	<div id="byLine" style="font-family: BlackoutMidnight;">
+    <p>By: <a href="http://cgrune.com/" title="CJG" target="_blank">Corey Grunewald</a></p>
+    </div>
+       
+   
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12955152-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
+<!-- Submit -->
+
+<script type="text/javascript">
+$('#submit').click(doSubmit);
+$('#save').click(doSave);
+$('#clear').click(clearCanvas);
+</script>
+
+
+
+

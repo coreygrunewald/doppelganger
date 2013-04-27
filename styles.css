@@ -1,0 +1,262 @@
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Styles */
+
+ * {
+    margin: 0;
+    padding: 0;
+    }
+    
+    html {
+    background: url(img/gridWeb.jpg) top left fixed;
+    }
+    
+    body {
+    font-weight: lighter;
+    font-family: "Helvetica", Arial, sans-serif;
+    background-image: url(img/gridWeb.jpg) top left fixed;
+    }
+    
+    #wrapper {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px dotted #666;
+    -moz-box-shadow: 0 0 20px #666;
+    -webkit-box-shadow: 0 0 20px #666;
+    }
+    
+    #grid {
+    background-color: white;
+    }
+    
+    #title{
+    width: 300px;
+    margin:1.2em auto;
+    }
+    
+    #title h1:hover {
+    background-color: AntiqueWhite;
+    }
+    
+    #title h1 {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 0 2px 2px lightgrey;
+    height: 1.5em;
+    text-decoration: none;
+    line-height: 1.4em;
+	background-color: white;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+    }
+    
+    #title a {
+    text-decoration: none;
+    color: #444;
+    }
+    
+    #byLine {
+    bottom: 1.5em;
+    width: 800px;
+    margin: .5em auto 0 auto;
+    }
+    
+    #byLine p {
+    text-align: center;
+    font-size: .7em;
+    }
+    
+    #controls {
+    width: 800px;
+    margin: .8em auto;
+    }
+    
+    #info {
+    height: 450px;
+    }
+    
+    #info p {
+    line-height: 1.2em;
+    }
+    
+    strong {
+	font-weight: bold;
+    }
+    
+    #info ul li {
+    line-height: 1.4em;
+    margin-bottom: .5em;
+    }
+    
+    #questions ol li {
+    }
+   
+
+/* Form Styles */
+
+form.cmxform fieldset {
+  /*margin-bottom: 10px;*/
+}
+form.cmxform legend {
+  padding: 0 2px 10px 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+form.cmxform label {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #666;
+  margin: .5em 0;
+}
+form.cmxform fieldset ol {
+  margin: 0;
+  padding: 0;
+}
+form.cmxform fieldset li {
+  list-style: none;
+  margin: 0;
+}
+
+form.cmxform fieldset fieldset label {
+  display: block;
+  width: auto;
+}
+form.cmxform em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+form.cmxform label {
+  width: 120px; /* Width of labels */
+}
+form.cmxform fieldset fieldset label {
+  margin-left: 123px; /* Width plus 3 (html space) */
+}
+
+/* Input Styles */
+
+form.cmxform input
+{
+background: #f0f0f0;
+color: black;
+display: inline-block;
+width: 225px;
+font-size: 1.2em;
+padding: .25em;
+}
+
+form.cmxform #submit {
+background-color: #888;
+text-align: center;
+margin: 1em 0 0 0;
+width: 120px;
+}
+
+form.cmxform select {
+font-size: 1.5em;
+width: 200px;
+}
+
+/* Controls */
+
+#nav {
+width: 800px;
+margin: 0 auto;
+background: url(img/click.png) bottom left no-repeat;
+}
+
+#clear {
+float: right;
+}
+
+#about {
+float: right;
+margin-right: 10px;
+}
+
+#email {
+float: right;
+}
+
+a.controls {
+text-decoration: none;
+background-color: white;
+padding: 5px;
+color: #444;
+margin-top: .5em;
+font-size: .8em;
+border: 1px solid #999;
+font-weight: bold;
+}
+
+#emailer ul li {
+text-align: center;
+widows: 200px;
+}
+
+/* @font-face */
+
+@font-face {
+	font-family: 'BlackoutMidnight';
+	src: url('fonts/Blackout-Midnight-webfont.eot');
+	src: url('fonts/Blackout-Midnight-webfont.woff') format('woff'), url('fonts/Blackout-Midnight-webfont.ttf') format('truetype'), url('fonts/Blackout-Midnight-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+canvas { font-family: "BlackoutMidnight"; }
+
